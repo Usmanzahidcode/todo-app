@@ -1,26 +1,24 @@
 import java.util.ArrayList;
 
 public class TodoList {
-    private ArrayList<TodoItem> list;
+    private final ArrayList<TodoItem> list = new ArrayList<TodoItem>();
 
-    public TodoList() {
-        list = new ArrayList<TodoItem>();
-    }
-
-    public TodoList addItem(TodoItem item) {
+    public void addItem(TodoItem item) {
         list.add(item);
-        return this;
     }
 
-    public TodoList markItemCompleted(int index) {
+    public boolean markItemCompleted(int index) {
+        if (index >= list.size()){
+            return false;
+        }
+
         TodoItem item = list.get(index);
         item.markCompleted();
-        return this;
+        return true;
     }
 
-    public TodoList clearList() {
+    public void clearList() {
         list.clear();
-        return this;
     }
 
     public void printList() {

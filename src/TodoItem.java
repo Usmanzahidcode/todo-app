@@ -38,9 +38,8 @@ public class TodoItem {
         return this;
     }
 
-    public TodoItem markCompleted() {
+    public void markCompleted() {
         this.completed = true;
-        return this;
     }
 
     public TodoItem markUnComplete() {
