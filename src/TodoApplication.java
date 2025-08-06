@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+
+// TODO: Write tests for the application.
 public class TodoApplication {
     private static final Scanner scanner = new Scanner(System.in);
     private static final TodoList todoList = new TodoList();
@@ -64,7 +66,7 @@ public class TodoApplication {
         int taskIndex = getUserInput();
         boolean marked = todoList.markItemCompleted(taskIndex - 1);
 
-        if (marked){
+        if (marked) {
             System.out.println("Todo marked as completed.\n");
         } else {
             System.out.println("Invalid item number.\n");
